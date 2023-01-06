@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.head{
+	width: 200px;
+	border: 1px solid;
+	height: 900px;
+	position: fixed;
+	font-size: 25pt;
+	background-color: yellow;
+}
+
+.head a{
+		text-decoration: none;
+}
+a:hover{
+	font-size: 30pt;
+}
+
+.menuTitle{
+	border: 1px;
+}
