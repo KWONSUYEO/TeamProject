@@ -34,7 +34,7 @@
 		<beans:property name="driverClassName"
 			value="oracle.jdbc.driver.OracleDriver" />
 		<beans:property name="url"
-			value="jdbc:oracle:thin:@192.168.219.102:1521:xe" />
+			value="jdbc:oracle:thin:@192.168.219.106:1521:xe" />
 		<beans:property name="username" value="kwon" />
 		<beans:property name="password" value="1" />
 	</beans:bean>
@@ -48,10 +48,10 @@
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="typeAliasesPackage"
-			value="[패키지명]" />
+			value="com.soldesk.jan05" />
 		<beans:property name="mapperLocations">
 			<beans:list>
-				<beans:value>classpath:MemberMapper.xml</beans:value>
+				<beans:value>classpath:memberMapper.xml</beans:value>
 			</beans:list>
 		</beans:property>
 	</beans:bean>
