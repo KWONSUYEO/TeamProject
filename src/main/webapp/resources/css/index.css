@@ -1,20 +1,22 @@
 @charset "UTF-8";
-.head{
-	width: 200px;
+.menuTitle{
+	width: 1200px;
 	border: 1px solid;
-	height: 900px;
+	height: 200px;
 	position: fixed;
 	font-size: 25pt;
 	background-color: yellow;
+	border: 1px;
 }
 
-.head a{
+.menuTitle a{
 		text-decoration: none;
 }
 a:hover{
 	font-size: 30pt;
 }
 
-.menuTitle{
-	border: 1px;
+.mainPage{
+	width: 600px;
+	height: 1000px;
 }

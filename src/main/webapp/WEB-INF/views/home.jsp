@@ -7,6 +7,6 @@
 <title>home.jsp</title>
 </head>
 <body>
-<img src="resources/img/food-304597_1280">
+<img src="resources/img/wheat-1845835_1920.jpg">
 </body>
 </html>
