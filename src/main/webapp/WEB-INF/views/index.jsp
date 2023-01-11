@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="resources/css/index.css">
 </head>
 <body>
-
 	<table class="menuTitle">
 		<tr>
 			<td><a href="go">HOME</a></td>
@@ -20,15 +19,17 @@
 		</tr>
 	</table>
 
+	<table id="LoginArea">
+		<tr>
+			<td><jsp:include page="${loginPage }" /></td>
+			<td><div id="r"><h1>${r }</h1></div></td>
+		</tr>
+	</table>
+
 	<table>
 		<tr><td class="mainPage" align="center">
 		<jsp:include page="${main }"/></td></tr>
 	</table>
-
-
-
-
-
 
 </body>
 </html>
