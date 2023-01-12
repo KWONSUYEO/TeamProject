@@ -7,8 +7,9 @@
 <title>signup.jsp</title>
 </head>
 <body>
-<form action="member.join" method="post" name="signup" onsubmit="return signupCheck()">
-<table id="joinTbl">
+<div class = "signup">
+<form action="member.signup" method="post" name="signup" onsubmit="return signupCheck()">
+<table id="SignupTbl">
 			<tr>
 				<td align="center" colspan="2"><input id="join_m_id" name="m_id" placeholder="ID를 입력하세요" class="i1" autocomplete="off" autofocus="autofocus" maxlength="10"></td>
 			</tr>
@@ -47,5 +48,6 @@
 			</tr>
 		</table>
 </form>
+</div>
 </body>
 </html>

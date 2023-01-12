@@ -26,22 +26,22 @@ public class MemberController {
 	public String memberLogin(Member m, HttpServletRequest req, HttpServletResponse res) {
 		mDAO.login(m, req, res);
 		mDAO.loginCheck(req);
-		req.setAttribute("contentPage", "home.jsp");
+		req.setAttribute("main", "home.jsp");
 		return "index";
 	}
 	
-	@RequestMapping(value = "/member.join.go", method = RequestMethod.GET)
-	public String memberJoinGo(HttpServletRequest req) {
+	@RequestMapping(value = "/member.signup.go", method = RequestMethod.GET)
+	public String memberSignupGo(HttpServletRequest req) {
 		mDAO.loginCheck(req);
-		req.setAttribute("contentPage", "member/join.jsp");
+		req.setAttribute("main", "member/signup.jsp");
 		return "index";
 	}
 		
-	@RequestMapping(value = "/member.join", method = RequestMethod.POST)
-	public String memberJoin(Member m, HttpServletRequest req) {
+	@RequestMapping(value = "/member.signup", method = RequestMethod.POST)
+	public String memberSignup(Member m, HttpServletRequest req) {
 		mDAO.signup(m, req);
 		mDAO.loginCheck(req);
-		req.setAttribute("contentPage", "home.jsp");
+		req.setAttribute("main", "home.jsp");
 		return "index";
 	}
 	
@@ -49,16 +49,16 @@ public class MemberController {
 	public String memberLogout(HttpServletRequest req) {
 		mDAO.logout(req);
 		mDAO.loginCheck(req);
-		req.setAttribute("contentPage", "home.jsp");
+		req.setAttribute("main", "home.jsp");
 		return "index";
 	}
 	
 	@RequestMapping(value = "/info.go", method = RequestMethod.GET)
 	public String info(HttpServletRequest req) {
 		if (mDAO.loginCheck(req)) {
-			req.setAttribute("contentPage", "member/info.jsp");
+			req.setAttribute("main", "member/info.jsp");
 		} else {
-			req.setAttribute("contentPage", "home.jsp");
+			req.setAttribute("main", "home.jsp");
 		}
 		return "index";
 	}
@@ -66,9 +66,9 @@ public class MemberController {
 	public String memberUpdate(Member m, HttpServletRequest req) {
 		if (mDAO.loginCheck(req)) {
 			mDAO.update(m, req);
-			req.setAttribute("contentPage", "home.jsp");
+			req.setAttribute("main", "home.jsp");
 		} else {
-			req.setAttribute("contentPage", "home.jsp");
+			req.setAttribute("main", "home.jsp");
 		}
 		return "index";
 	}
@@ -80,7 +80,7 @@ public class MemberController {
 			mDAO.logout(req);
 			mDAO.loginCheck(req);
 		}
-		req.setAttribute("contentPage", "home.jsp");
+		req.setAttribute("main", "home.jsp");
 		return "index";
 	}
 }

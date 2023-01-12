@@ -40,12 +40,9 @@ public class MemberDAO {
 			List<Member> ms = ss.getMapper(MemberMapper.class).getMember(m);
 			if (ms.size() != 0) {
 				Member m1 = ms.get(0);
-				if (m1.getM_id().equals(m.getM_id())) {
+				if (m1.getM_password().equals(m.getM_password())) {
 					req.getSession().setAttribute("loginMember", m1);
 					req.getSession().setMaxInactiveInterval(60*10); 
-					Cookie c = new Cookie("lastLoginID", m1.getM_id());
-					c.setMaxAge(60*60*24*5);
-					res.addCookie(c);
 					req.setAttribute("r", "로그인 완료");
 				} else {
 					req.setAttribute("r", "패스워드가 일치하지 않습니다");

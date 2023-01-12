@@ -8,10 +8,10 @@
 </head>
 <body>
 <table id = "login">
-<form action="member.login">
+<form action="member.login" method="post">
 	<tr><th align="center">로그인 창</th></tr>
-	<tr><td align="center">ID</td></tr>
-	<tr><td align="center">PASSWORD</td></tr>
+	<tr><td align="center">ID<input name="m_id"></td></tr>
+	<tr><td align="center">PASSWORD<input name="m_password"></td></tr>
 	<tr><td align="center"><button>로그인</button></td>
 
 </form>

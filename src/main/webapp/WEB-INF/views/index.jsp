@@ -8,6 +8,10 @@
 <meta charset="UTF-8">
 <title>index.jsp</title>
 <link rel="stylesheet" href="resources/css/index.css">
+<script type="text/javascript" src="resources/js/jQuery.js"></script>
+<script type="text/javascript" src="resources/js/KwonValidChecker.js"></script>
+<script type="text/javascript" src="resources/js/go.js"></script>
+<script type="text/javascript" src="resources/js/check.js"></script>
 </head>
 <body>
 	<table class="menuTitle">
@@ -19,7 +23,7 @@
 		</tr>
 	</table>
 
-	<table id="LoginArea">
+	<table class="LoginArea">
 		<tr>
 			<td><jsp:include page="${loginPage }" /></td>
 			<td><div id="r"><h1>${r }</h1></div></td>

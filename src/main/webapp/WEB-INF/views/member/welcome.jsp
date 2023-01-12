@@ -14,7 +14,7 @@
 <tr>
 <td colspan="2">
 <button onclick="Infogo()">내정보</button>
-<button onclick="logout()">로그아웃</button>
+<button onclick="Logout()">로그아웃</button>
 </tr>
 </table>
 </body>
