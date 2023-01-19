@@ -14,21 +14,23 @@
 	</table>
 
 	<!-- 아래 테이블을 회원이 가지고 있는 찜 갯수만큼 for로 반복 -->
-	<table id="dibs1" border="1"> <!-- id의 숫자는 찜 객체의 순서로 넘버링 -->
-		<tr id="dibs1_Title">
-			<td>찜목록</td>
-		</tr>
-		<tr>
-			<td id="dibs1_Info">
-				찜한 가게의 정보(맛집 테이블에서 가져오기)
-			</td>
-		</tr>
-		<tr>
-			<td id="dibs1_Memo">
-				찜한 가게에 대한 메모(코멘트)
-			</td>
-		</tr>
-	</table>
+	<C:forEach var="d" items="${dibs }">
+		<table class="dibsList" border="1">
+			<tr class="dibs_Title">
+				<th>${d.r_restName }</th>
+			</tr>
+			<tr>
+				<td class="dibs_Info">
+					${d.r_addr }/${d.r_tel }/${d.r_category }/${d.r_priceRange }/${d.r_openHours }
+				</td>
+			</tr>
+			<tr>
+				<td class="dibs_Memo">
+					찜한 가게에 대한 메모(코멘트)
+				</td>
+			</tr>
+		</table>
+	</C:forEach>
 	
 </body>
 </html>
