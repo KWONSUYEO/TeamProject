@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.soldesk.jan05.restaurants.RestaurantsMapper">
+	
+	<select id="getAllDibs" resultType="com.soldesk.jan05.restaurants.Restaurants">
+		select * from restaurants where r_level = 1 <!-- r_m_id 정보 추가필요 -->
+	</select>
+	
+	<!-- 임시작성 -->
+	<select id="getAllRestaurants" resultType="com.soldesk.jan05.restaurants.Restaurants">
+		select * from restaurants
+	</select>
+	<select id="getAllVisit" resultType="com.soldesk.jan05.restaurants.Restaurants">
+		select * from restaurants where r_level = 2
+	</select>
+
+</mapper>
