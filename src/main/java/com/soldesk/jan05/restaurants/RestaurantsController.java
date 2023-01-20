@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.soldesk.jan05.member.Member;
 import com.soldesk.jan05.member.MemberDAO;
 
 @Controller
@@ -20,7 +21,8 @@ public class RestaurantsController {
 	@RequestMapping(value = "/dibs.go", method = RequestMethod.GET)
 	public String info(HttpServletRequest req) {
 		if (mDAO.loginCheck(req)) {
-			rDAO.getAllDibs(req);
+			Member m = (Member) req.getSession().getAttribute("loginMember");
+			rDAO.getAllDibs(m, req);
 			req.setAttribute("main", "restaurants/dibsList.jsp");			
 		} else {
 			req.setAttribute("main", "home.jsp");

@@ -26,7 +26,14 @@
 			</tr>
 			<tr>
 				<td class="dibs_Memo">
-					찜한 가게에 대한 메모(코멘트)
+					<C:choose>
+						<C:when test="${empty d.r_memo }">
+							<input id="memoBox" value="${d.r_memo }">         <button>등록</button>
+						</C:when>
+						<C:otherwise>
+							<input id="memoBox" placeholder="메모를 입력하세요">         <button>등록</button>
+						</C:otherwise>
+					</C:choose>
 				</td>
 			</tr>
 		</table>

@@ -24,21 +24,24 @@ create table restaurants(
 	r_openHours varchar2(20 char), -- 엽엉시간
 	r_lastOrder varchar2(10 char), -- 마지막 주문
 	r_holiday varchar2(5 char), -- 휴일
+	r_memo varchar2(250 char), -- 메모
 	constraint rest_PK primary key(r_level, r_restName, r_m_id)
 )
 
 insert into restaurants values ('1', '테스트맛집_1', 'user_1', 'addr_1', '02-111-1111',
-								'한식', '2만원 미만', '주차공간없음', '08:30 - 20:00', '19:00', '일')
+								'한식', '2만원 미만', '주차공간없음', '08:30 - 20:00', '19:00', '일', '꼭 가보고 싶은 맛집')
 
 insert into restaurants values ('1', '테스트맛집_2', 'user_2', 'addr_2', '02-222-2222',
-								'한식', '만원 미만', '유료주차 가능', '17:00 - 01:00', null, null)
+								'한식', '만원 미만', '유료주차 가능', '17:00 - 01:00', null, null, null)
 
 select * from RESTAURANTS
+
+drop table restaurants
 
 delete from RESTAURANTS where r_level = '2' and r_restName = '테스트맛집_2' and r_m_id = 'user_2';
 
 select * from restaurants where r_level = 1
 
-
+select * from restaurants where r_level = 1 and r_m_id = user_1
 
 

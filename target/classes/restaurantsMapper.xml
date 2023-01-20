@@ -3,7 +3,7 @@
 <mapper namespace="com.soldesk.jan05.restaurants.RestaurantsMapper">
 	
 	<select id="getAllDibs" resultType="com.soldesk.jan05.restaurants.Restaurants">
-		select * from restaurants where r_level = 1 <!-- r_m_id 정보 추가필요 -->
+		select * from restaurants where r_level = 1 and r_m_id = '${m_id}'
 	</select>
 	
 	<!-- 임시작성 -->
@@ -11,7 +11,7 @@
 		select * from restaurants
 	</select>
 	<select id="getAllVisit" resultType="com.soldesk.jan05.restaurants.Restaurants">
-		select * from restaurants where r_level = 2
+		select * from restaurants where r_level = 2 and r_m_id = '${m_id}' <!-- Member 클래스의 m_id사용 -->
 	</select>
 
 </mapper>

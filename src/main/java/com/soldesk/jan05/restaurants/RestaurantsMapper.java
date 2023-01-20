@@ -2,8 +2,10 @@ package com.soldesk.jan05.restaurants;
 
 import java.util.List;
 
+import com.soldesk.jan05.member.Member;
+
 public interface RestaurantsMapper {
-	public abstract List<Restaurants> getAllDibs(); // 파라미터로 r_m_id필요(or member클래스전체) => 로그인한 회원의 찜목록만
+	public abstract List<Restaurants> getAllDibs(Member m);
 	
 	// 임시작성
 	public abstract List<Restaurants> getAllRestaurants();
