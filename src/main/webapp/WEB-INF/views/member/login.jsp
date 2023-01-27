@@ -12,10 +12,10 @@
 	<tr><th align="center">로그인 창</th></tr>
 	<tr><td align="center">ID<input name="m_id"></td></tr>
 	<tr><td align="center">PASSWORD<input name="m_password"></td></tr>
-	<tr><td align="center"><button>로그인</button></td>
+	<tr><td align="center"><button>로그인</button>
 
 </form>
-<td><button onclick="Signup()">회원가입</button></td></tr>
+<button onclick="Signup()">회원가입</button></td></tr>
 </table>
 </body>
 </html>
