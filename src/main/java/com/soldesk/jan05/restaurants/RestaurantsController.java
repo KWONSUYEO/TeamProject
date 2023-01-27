@@ -19,9 +19,26 @@ public class RestaurantsController {
 	private RestaurantsDAO rDAO;
 	
 	@RequestMapping(value = "/dibs.go", method = RequestMethod.GET)
-	public String info(HttpServletRequest req) {
+	public String dibsist(HttpServletRequest req) {
 		if (mDAO.loginCheck(req)) {
 			Member m = (Member) req.getSession().getAttribute("loginMember");
+			rDAO.getAllDibs(m, req);
+			req.setAttribute("main", "restaurants/dibsList.jsp");			
+		} else {
+			req.setAttribute("main", "home.jsp");
+		}
+		return "index";
+	}
+	
+	@RequestMapping(value = "/dibs.memo", method = RequestMethod.POST)
+	public String dibsMemo(Restaurants r, HttpServletRequest req) {
+		if (mDAO.loginCheck(req)) {
+			Member m = (Member) req.getSession().getAttribute("loginMember");
+			Restaurants rs = new Restaurants(); 
+			rs.setR_m_id(m.getM_id());
+			rs.setR_no(r.getR_no());
+			rs.setR_memo(r.getR_memo());
+			rDAO.dibsMemo(rs, req);
 			rDAO.getAllDibs(m, req);
 			req.setAttribute("main", "restaurants/dibsList.jsp");			
 		} else {

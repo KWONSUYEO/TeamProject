@@ -6,6 +6,7 @@ import com.soldesk.jan05.member.Member;
 
 public interface RestaurantsMapper {
 	public abstract List<Restaurants> getAllDibs(Member m);
+	public abstract int dibsMemo(Restaurants r);
 	
 	// 임시작성
 	public abstract List<Restaurants> getAllRestaurants();

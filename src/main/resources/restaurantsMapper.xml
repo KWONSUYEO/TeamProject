@@ -6,6 +6,11 @@
 		select * from restaurants where r_level = 1 and r_m_id = '${m_id}'
 	</select>
 	
+	<update id="dibsMemo" parameterType="com.soldesk.jan05.restaurants.Restaurants">
+		update restaurants set r_memo = '${r_memo}' 
+			where r_level = '1' and r_m_id = '${r_m_id}' and r_no = ${r_no}
+	</update>
+	
 	<!-- 임시작성 -->
 	<select id="getAllRestaurants" resultType="com.soldesk.jan05.restaurants.Restaurants">
 		select * from restaurants

@@ -1,5 +1,7 @@
 package com.soldesk.jan05.restaurants;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.ibatis.session.SqlSession;
@@ -21,6 +23,24 @@ public class RestaurantsDAO {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	public void dibsMemo(Restaurants r, HttpServletRequest req) {
+		try {
+			// [dibs]객체에 찜한 맛집에 대한 메모 등록
+			System.out.println(r.getR_m_id());
+			System.out.println(r.getR_no());
+			System.out.println(r.getR_memo());
+			if (ss.getMapper(RestaurantsMapper.class).dibsMemo(r) == 1) {
+				req.setAttribute("dr", "찜한 맛집 [No." + r.getR_no() + "] 메모등록 완료");
+				System.out.println("찜한 맛집 [No." + r.getR_no() + "] 메모등록 완료");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			req.setAttribute("dr", "찜한 맛집 [No." + r.getR_no() + "] 메모등록 실패");
+			System.out.println("찜한 맛집 [No." + r.getR_no() + "] 메모등록 실패");
 		}
 	}
 	

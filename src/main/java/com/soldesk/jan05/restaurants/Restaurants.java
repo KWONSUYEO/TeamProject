@@ -2,6 +2,7 @@ package com.soldesk.jan05.restaurants;
 
 public class Restaurants {
 	private String r_level;
+	private int r_no;
 	private String r_restName;
 	private String r_m_id;
 	private String r_addr;
@@ -16,12 +17,13 @@ public class Restaurants {
 	public Restaurants() {
 		// TODO Auto-generated constructor stub
 	}
-	public Restaurants(String r_level, String r_restName, String r_m_id, String r_addr, String r_tel, String r_category,
+	public Restaurants(String r_level, String r_m_id, int r_no, String r_restName, String r_addr, String r_tel, String r_category,
 			String r_priceRange, String r_parking, String r_openHours, String r_lastOrder, String r_holiday, String r_memo) {
 		super();
 		this.r_level = r_level;
-		this.r_restName = r_restName;
 		this.r_m_id = r_m_id;
+		this.r_no = r_no;
+		this.r_restName = r_restName;
 		this.r_addr = r_addr;
 		this.r_tel = r_tel;
 		this.r_category = r_category;
@@ -38,17 +40,23 @@ public class Restaurants {
 	public void setR_level(String r_level) {
 		this.r_level = r_level;
 	}
-	public String getR_restName() {
-		return r_restName;
-	}
-	public void setR_restName(String r_restName) {
-		this.r_restName = r_restName;
-	}
 	public String getR_m_id() {
 		return r_m_id;
 	}
 	public void setR_m_id(String r_m_id) {
 		this.r_m_id = r_m_id;
+	}
+	public void setR_no(int r_no) {
+		this.r_no = r_no;
+	}
+	public int getR_no() {
+		return r_no;
+	}
+	public String getR_restName() {
+		return r_restName;
+	}
+	public void setR_restName(String r_restName) {
+		this.r_restName = r_restName;
 	}
 	public String getR_addr() {
 		return r_addr;

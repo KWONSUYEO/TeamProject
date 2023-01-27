@@ -19,3 +19,14 @@ function withdraw(){
 		location.href = "member.withdraw";
 	}
 }
+
+function dibsMemo(){
+//	var restName = document.getElementById("r_restName").innerText;
+	
+//	sessionStorage.setItem("r_restName", restName);
+//	element.setAttribute( "r_restName", restName );
+//	var real = confirm(restName);
+	location.href = "dibs.memo";
+//	return true;
+	
+}

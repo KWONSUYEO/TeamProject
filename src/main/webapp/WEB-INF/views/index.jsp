@@ -27,6 +27,7 @@
 		<tr>
 			<td><jsp:include page="${loginPage }" /></td>
 			<td><div id="r"><h1>${r }</h1></div></td>
+			<td><div id="dr"><h5>${dr }</h5></div></td>
 		</tr>
 	</table>
 
