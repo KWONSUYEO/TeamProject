@@ -17,6 +17,7 @@
 		autocomplete="off" type="password"></td></tr>
 	<tr><td>닉네임<input name="m_nickname" value="${sessionScope.loginMember.m_nickname }"></td></tr>
 	<tr><td align="center" colspan="2">선호지역<select name="m_location">
+				<option>서울특별시</option>
 				<option>강원도</option>
 				<option>경기도</option>
 				<option>경상남도</option>
@@ -25,7 +26,6 @@
 				<option>대구광역시</option>
 				<option>대전광역시</option>
 				<option>부산광역시</option>
-				<option>서울특별시</option>
 				<option>세종특별자치시</option>
 				<option>울산광역시</option>
 				<option>인천광역시</option>
