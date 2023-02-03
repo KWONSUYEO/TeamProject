@@ -9,14 +9,14 @@
 <body>
 <table>
 <form action="member.update" method="post" name="updateForm" onsubmit="return UpdateCheck()">
-	<tr><th>정보조회</th></tr>
-	<tr><td>ID<input name="m_id" value="${sessionScope.loginMember.m_id }" readonly="readonly"></td></tr>
-	<tr><td>PW<input name="m_password" value="${sessionScope.loginMember.m_password }" 
+	<tr><th><h1>정보조회</h1></th></tr>
+	<tr><td>ID <input name="m_id" value="${sessionScope.loginMember.m_id }" readonly="readonly"></td></tr>
+	<tr><td>PW <input name="m_password" value="${sessionScope.loginMember.m_password }" 
 		autofocus="autofocus" autocomplete="off" type="password"></td></tr>
-	<tr><td>PW확인<input name="m_passwordChk" value="${sessionScope.loginMember.m_password }" 
+	<tr><td>PW확인 <input name="m_passwordChk" value="${sessionScope.loginMember.m_password }" 
 		autocomplete="off" type="password"></td></tr>
-	<tr><td>닉네임<input name="m_nickname" value="${sessionScope.loginMember.m_nickname }"></td></tr>
-	<tr><td align="center" colspan="2">선호지역<select name="m_location">
+	<tr><td>닉네임 <input name="m_nickname" value="${sessionScope.loginMember.m_nickname }"></td></tr>
+	<tr><td align="center" colspan="2">선호지역 <select name="m_location">
 				<option>서울특별시</option>
 				<option>강원도</option>
 				<option>경기도</option>
