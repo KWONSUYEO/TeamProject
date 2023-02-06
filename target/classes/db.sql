@@ -66,4 +66,6 @@ create table review_reply(
 );
 create sequence review_reply_seq;
 
+drop table review
 
+drop table review_reply

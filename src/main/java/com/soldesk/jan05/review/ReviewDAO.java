@@ -67,8 +67,8 @@ public class ReviewDAO {
 			msgCount = allMsgCount;
 			search = "";
 		} else { // 검색
-			ReviewSelector sSel2 = new ReviewSelector(search, 0, 0);
-			msgCount = ss.getMapper(ReviewMapper.class).getSearchMsgCount(sSel2);
+			ReviewSelector rSel2 = new ReviewSelector(search, 0, 0);
+			msgCount = ss.getMapper(ReviewMapper.class).getSearchMsgCount(rSel2);
 		}
 		
 		
@@ -81,12 +81,12 @@ public class ReviewDAO {
 		
 		ReviewSelector rSel = new ReviewSelector(search, start, end);
 		
-		List<Review> reviewMsgs = ss.getMapper(ReviewMapper.class).getMsg(rSel);
+		List<Review> reviews = ss.getMapper(ReviewMapper.class).getMsg(rSel);
 
-		for (Review reviewMsg : reviewMsgs) {
-			reviewMsg.setRr_replys(ss.getMapper(ReviewMapper.class).getReply(reviewMsg));
+		for (Review review : reviews) {
+			review.setRr_replys(ss.getMapper(ReviewMapper.class).getReply(review));
 		}
-		req.setAttribute("msgs", reviewMsgs);
+		req.setAttribute("msgs", reviews);
 	}
 
 	public void searchClear(HttpServletRequest req) {
@@ -123,7 +123,7 @@ public class ReviewDAO {
 			}
 
 			Member m = (Member) req.getSession().getAttribute("loginMember");
-			rm.setR_m_id(m.getM_id()); // 로그인 한 사람과 글쓴 사람이 동일
+			rm.setM_id(m.getM_id());
 			rm.setRr_color(colors[new Random().nextInt(colors.length)]);
 			String txt = rm.getRr_txt();
 			txt = txt.replace("\r\n", "<br>");
@@ -164,3 +164,4 @@ public class ReviewDAO {
 		}
 	}
 }
+

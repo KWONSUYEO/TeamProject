@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>index.jsp</title>
 <link rel="stylesheet" href="resources/css/index.css">
+<link rel="stylesheet" href="resources/css/review.css">
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
 <script type="text/javascript" src="resources/js/KwonValidChecker.js"></script>
 <script type="text/javascript" src="resources/js/go.js"></script>
