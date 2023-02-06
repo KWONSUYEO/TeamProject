@@ -45,4 +45,25 @@ select * from restaurants where r_level = 1
 
 select * from restaurants where r_level = 1 and r_m_id = user_1
 
+create table review(
+	rr_no number(4) primary key, 			
+	rr_owner varchar2(10 char) not null, 	
+	rr_txt varchar2(300 char) not null,
+	rr_when date not null,
+	rr_color char(7) not null
+);
+create sequence review_seq;
+-----
+create table review_reply(
+	cr_no number(5) primary key, 
+	cr_rr_no number(4) not null, 
+	cr_owner varchar2(10 char) not null,
+	cr_txt varchar2(200 char) not null,
+	cr_when date not null,
+	constraint review_reply1
+		foreign key(cr_rr_no) references review(rr_no)
+		on delete cascade
+);
+create sequence review_reply_seq;
+
 
