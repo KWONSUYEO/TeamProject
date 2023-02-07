@@ -19,7 +19,7 @@
 		resultType="java.lang.Integer">
 		select count(*) from member, review
 		where m_id = rr_owner
-		and (rr_txt like '%'||#{search}||'%' or rr_id like '%'||#{search}||'%')
+		and (rr_txt like '%'||#{search}||'%' or m_id like '%'||#{search}||'%')
 	</select>
 	<select id="getMsg"
 		parameterType="com.soldesk.jan05.review.ReviewSelector"
