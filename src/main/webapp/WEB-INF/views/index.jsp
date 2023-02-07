@@ -15,9 +15,10 @@
 </head>
 <body>
 	<table class="menuTitle">
-		<tr>
+		<tr align="center">
 			<td><a href="go">HOME</a></td>
 			<td><a href="info.go">회원정보</a></td>
+			<td><img class="logo" src="resources/img/logo2.png"></td>
 			<td><a href="dibs.go">찜목록</a></td>
 			<td><a href="review.go">방문후기</a></td>
 		</tr>
