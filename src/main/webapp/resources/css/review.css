@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+.rm {
+	width: 90%;
+	border-radius: 10px;
+	background-color: #ffffff33;
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+.rmOwner {
+	font-size: 18pt;
+	padding-left: 10px;
+	text-shadow: 2px 2px 2px black;
+}
+
+.rmDate {
+	font-size: 13pt;
+	color: #EAEAEA;
+	padding-right: 10px;
+	text-shadow: 2px 2px 2px black;
+}
+
+.rmTxt {
+	font-size: 13pt;
+	color: #EAEAEA;
+	padding-left: 13px;
+	font-weight: 900;
+	word-break: break-all;
+}
+
+.rm button {
+	border: none;
+	background-color: transparent;
+	font-size: 15pt;
+	text-shadow: 2px 2px 2px black;
+}
+
+#WriteArea {
+	position: fixed; 
+	bottom: 2px;
+	width: 450px;
+	transition: all 0.4s ease-out;
+}
+
+#WriteArea2 {
+	position: fixed;
+	bottom: 2px;
+	width: 450px;
+	transition: all 0.4s ease-out;
+}
+#WriteTable {
+	width: 410px;
+	border-spacing: 0px;
+	background-color: #00000055;
+}
+
+#WriteTable textarea {
+	border: none;
+	background-color: transparent;
+	width: 350px;
+	height: 100px;
+	font-size: 14pt;
+	color: #EAEAEA;
+	padding: 10px;
+}
+
+#WriteTable textarea::placeholder, #snsSearchTable input::placeholder
+	{
+	color: #EAEAEA;
+}
+
+#swtTd1 {
+	border-left: #EAEAEA solid 4px;
+	border-top: #EAEAEA solid 4px;
+	border-bottom: #EAEAEA solid 4px;
+	width: 370px;
+}
+
+#swtTd2 {
+	border-right: white solid 4px;
+	border-top: white solid 4px;
+	border-bottom: white solid 4px;
+	padding-right: 10px;
+}
+
+#SearchTable {
+	width: 400px;
+	border-spacing: 0px;
+	background-color: #00000055;
+}
+
+#sstTd1 {
+	border-top: white solid 4px;
+	border-bottom: white solid 4px;
+	border-left: white solid 4px;
+	width: 370px;
+}
+
+#sstTd2 {
+	border-top: white solid 4px;
+	border-bottom: white solid 4px;
+	border-right: white solid 4px;
+}
+
+#SearchTable input {
+	border: none;
+	background-color: transparent;
+	color: white;
+	font-size: 14pt;
+	padding: 10px;
+	width: 340px;
+}
+
+#L {
+	position: fixed;
+	left: 0px;
+	top: 200px;
+	width: 150px;
+	height: 550px;
+	color: #000000;
+	font-size: 100pt;
+	cursor: pointer;
+}
+
+#R {
+	position: fixed;
+	right: 0px;
+	top: 200px;
+	width: 150px;
+	height: 550px;
+	color: #000000;
+	font-size: 100pt;
+	cursor: pointer;
+}
+
+#rmReplyArea {
+	padding: 20px;
+	font-size: 12pt;
+	color: white;
+}
+
+.rmReplyID {
+	font-size: 13pt;
+	padding-bottom: 7px;
+}
+#rmReplyArea input {
+	border: none;
+	background-color: transparent;
+	font-size: 12pt;
+	color:white;
+	width: 450px;
+	padding-left: 7px;
+}
+#rmReplyArea button {
+	border: none;
+	background-color: transparent;
+	font-size: 13pt;
+}

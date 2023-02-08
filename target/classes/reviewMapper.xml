@@ -12,23 +12,23 @@
 		where cr_no = #{cr_no}
 	</delete>
 	<select id="getAllMsgCount" resultType="java.lang.Integer">
-		select count(*)	from restaurants, review where r_m_id = rr_owner
+		select count(*)	from member, review where m_id = rr_owner
 	</select>
 	<select id="getSearchMsgCount"
 		parameterType="com.soldesk.jan05.review.ReviewSelector"
 		resultType="java.lang.Integer">
-		select count(*) from restaurants, review
-		where r_m_id = rr_owner
-		and (rr_txt like '%'||#{search}||'%' or rr_id like '%'||#{search}||'%')
+		select count(*) from member, review
+		where m_id = rr_owner
+		and (rr_txt like '%'||#{search}||'%' or m_id like '%'||#{search}||'%')
 	</select>
 	<select id="getMsg"
 		parameterType="com.soldesk.jan05.review.ReviewSelector"
 		resultType="com.soldesk.jan05.review.Review">
 		select * from (
-		select rownum as rn, r_m_id, rr_txt, rr_when, rr_color, rr_no
-		from ( select * from restaurants, review
-		where r_m_id = rr_owner
-		and (rr_txt like '%'||#{search}||'%' or r_m_id like '%'||#{search}||'%')
+		select rownum as rn, m_id, rr_txt, rr_when, rr_color, rr_no
+		from ( select * from member, review
+		where m_id = rr_owner
+		and (rr_txt like '%'||#{search}||'%' or m_id like '%'||#{search}||'%')
 		order by rr_when desc ))
 		where rn &gt;= #{start} and rn &lt;= #{end}
 	</select>
@@ -40,7 +40,7 @@
 		order by cr_when
 	</select>
 	<insert id="writeMsg" parameterType="com.soldesk.jan05.review.Review">
-		insert into review values(review_seq.nextval, #{r_m_id}, #{rr_txt}, sysdate, #{rr_color})
+		insert into review values(review_seq.nextval, #{m_id}, #{rr_txt}, sysdate, #{rr_color})
 	</insert>
 	<insert id="writeReply"	parameterType="com.soldesk.jan05.review.ReviewReply">
 		insert into reviews_reply values(review_reply_seq.nextval, #{cr_rr_no}, #{cr_owner}, #{cr_txt}, sysdate)
