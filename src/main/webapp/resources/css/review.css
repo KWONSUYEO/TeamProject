@@ -28,7 +28,7 @@
 
 .rmTxt {
 	font-size: 13pt;
-	color: #EAEAEA;
+	color: black;
 	padding-left: 13px;
 	font-weight: 900;
 	word-break: break-all;
@@ -46,6 +46,7 @@
 	bottom: 2px;
 	width: 450px;
 	transition: all 0.4s ease-out;
+	background-color: black;
 }
 
 #WriteArea2 {
@@ -53,6 +54,7 @@
 	bottom: 2px;
 	width: 450px;
 	transition: all 0.4s ease-out;
+	background-color: black;
 }
 #WriteTable {
 	width: 410px;
@@ -70,7 +72,7 @@
 	padding: 10px;
 }
 
-#WriteTable textarea::placeholder, #snsSearchTable input::placeholder
+#WriteTable textarea::placeholder, #SearchTable input::placeholder
 	{
 	color: #EAEAEA;
 }
@@ -142,7 +144,7 @@
 #rmReplyArea {
 	padding: 20px;
 	font-size: 12pt;
-	color: white;
+	color: #000000;
 }
 
 .rmReplyID {
@@ -153,7 +155,7 @@
 	border: none;
 	background-color: transparent;
 	font-size: 12pt;
-	color:white;
+	color: black;
 	width: 450px;
 	padding-left: 7px;
 }

@@ -146,7 +146,7 @@ public class ReviewDAO {
 			String token = req.getParameter("token");
 			String st2 = (String) req.getSession().getAttribute("st");
 			if (st2 != null && token.equals(st2)) {
-				req.setAttribute("r", "댓글쓰기실패(새로고침)");
+				req.setAttribute("r", "댓글d쓰기실패(새로고침)");
 				return;
 			}
 
@@ -157,7 +157,7 @@ public class ReviewDAO {
 				req.setAttribute("r", "댓글쓰기성공");
 				req.getSession().setAttribute("st", token);
 			} else {
-				req.setAttribute("r", "댓글쓰기실패");
+				req.setAttribute("r", "댓글e쓰기실패");
 			}
 		} catch (Exception e) {
 			req.setAttribute("r", "댓글쓰기실패");
