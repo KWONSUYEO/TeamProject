@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>home.jsp</title>
+<script type="text/javascript" src="resources/js/go.js"></script>
 <style>
 .map_wrap, .map_wrap * {
 	margin: 0;
@@ -194,7 +195,7 @@
 </style>
 </head>
 <body>
-<div id="map" style="width: 1800px; height: 700px;"></div>
+<div id="map" style="width: 800px; height: 500px;"></div>
 	<div class="map_wrap">
 		<div id="map"
 			style="width: 100%; height: 100%; position: relative; overflow: hidden;"></div>
@@ -278,9 +279,10 @@
 
 			for (var i = 0; i < places.length; i++) {
 
-				var placePosition = new kakao.maps.LatLng(places[i].y,
+				const placePosition = new kakao.maps.LatLng(places[i].y,
 						places[i].x), marker = addMarker(placePosition, i), itemEl = getListItem(
 						i, places[i]);
+				const restName = places[i].place_name;
 
 				bounds.extend(placePosition);
 
@@ -297,11 +299,18 @@
 
 					itemEl.onmouseover = function() {
 						displayInfowindow(marker, title);
+		                map.panTo(placePosition);
 					};
 
 					itemEl.onmouseout = function() {
 						infowindow.close();
 					};
+
+		            itemEl.addEventListener("click", function (e) {
+		            	displayInfowindow(marker, title);
+		            	searchRest(restName);
+		            });
+
 				})(marker, places[i].place_name);
 
 				fragment.appendChild(itemEl);
@@ -331,7 +340,7 @@
 
 			itemStr += '  <span class="tel">' + places.phone + '</span>'
 					+ '</div>';
-
+			var restName = places.place_name;
 			el.innerHTML = itemStr;
 			el.className = 'item';
 
@@ -404,6 +413,11 @@
 				el.removeChild(el.lastChild);
 			}
 		}
+		
+		function searchRest(restName) {
+			restSearch(restName);
+		}
+		
 	</script>
 </body>
 </html>

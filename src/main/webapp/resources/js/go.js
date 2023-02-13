@@ -21,14 +21,7 @@ function withdraw(){
 }
 
 function dibsMemo(){
-//	var restName = document.getElementById("r_restName").innerText;
-	
-//	sessionStorage.setItem("r_restName", restName);
-//	element.setAttribute( "r_restName", restName );
-//	var real = confirm(restName);
 	location.href = "dibs.memo";
-//	return true;
-	
 }
 
 function reviewMsgDelete(no) {
@@ -50,4 +43,8 @@ function reviewReplyDelete(no) {
 	if (confirm("삭제?")) {
 		location.href = "review.reply.delete?cr_no=" + no;
 	}
+}
+
+function restSearch(restName){
+	location.href = "search/" + restName;
 }

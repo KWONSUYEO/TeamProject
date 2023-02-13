@@ -36,13 +36,12 @@
 				</div></td>
 		</tr>
 	</table>
-
+	
 	<table>
 		<tr>
 			<td class="mainPage" align="center"><jsp:include page="${main }" />
 			</td>
 		</tr>
 	</table>
-	
 </body>
 </html>
