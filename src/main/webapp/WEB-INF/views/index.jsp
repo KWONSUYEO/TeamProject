@@ -17,10 +17,10 @@
 </head>
 <body>
 	<table class="menuTitle">
-		<tr align="center">
+		<tr>
 			<td><a href="go">HOME</a></td>
 			<td><a href="info.go">회원정보</a></td>
-			<td><a href="go"><img class="logo" src="resources/img/logo2.png"></a></td>
+			<td><a href="go"><img src="resources/img/logo2.png"></a></td>
 			<td><a href="dibs.go">찜목록</a></td>
 			<td><a href="review.go">방문후기</a></td>
 		</tr>
@@ -37,9 +37,12 @@
 				</div></td>
 		</tr>
 	</table>
-
-	<div class="mainPage">
-	<jsp:include page="${main }" />
-	</div>
+	
+	<table>
+		<tr>
+			<td class="mainPage" align="center"><jsp:include page="${main }" />
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
