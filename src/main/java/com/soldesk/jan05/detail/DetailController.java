@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.soldesk.jan05.member.Member;
 import com.soldesk.jan05.member.MemberDAO;
-import com.soldesk.jan05.restaurants.Restaurants;
 import com.soldesk.jan05.restaurants.RestaurantsDAO;
 
 @Controller
@@ -37,7 +36,7 @@ public class DetailController {
 	}
 	
 	// [찜목록]화면 전체 맛집정보세팅
-	@RequestMapping(value = "/do.dibs", method = RequestMethod.GET)
+	@RequestMapping(value = "/{restName}.dibs", method = RequestMethod.GET)
 	public String regDibs(Detail d, HttpServletRequest req) {
 		if (mDAO.loginCheck(req)) {
 			Member m = (Member) req.getSession().getAttribute("loginMember");

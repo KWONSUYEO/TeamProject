@@ -7,16 +7,14 @@
 <head>
 <meta charset="UTF-8">
 <title>맛집 상세정보</title>
-<link rel="stylesheet" href="resources/css/index.css">
-<link rel="stylesheet" href="resources/css/review.css">
-<script type="text/javascript" src="resources/js/jQuery.js"></script>
-<script type="text/javascript" src="resources/js/KwonValidChecker.js"></script>
-<script type="text/javascript" src="resources/js/go.js"></script>
-<script type="text/javascript" src="resources/js/check.js"></script>
 </head>
 <body>
-	<table id="detail_Title" border="1">
-		<tr><td><h1>${detail.restName }</h1></td><td><a id="doDibs" href="do.dibs">찜하기</a></td></tr>
+
+	<table class="detail_Title" border="1">
+		<tr>
+			<td><h1>${detail.restName }</h1></td>
+			<td><a id="doDibs" href="${detail.restName }.dibs">찜하기</a></td>
+		</tr>
 		<C:choose>
 			<C:when test="${not empty detail.addr }">
 				<tr><td>주소</td>

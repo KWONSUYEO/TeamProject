@@ -1,7 +1,6 @@
 package com.soldesk.jan05.detail;
 
 import java.net.URLEncoder;
-import java.util.Iterator;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -44,7 +43,6 @@ public class DetailDAO {
 			det.setRestName(restName); // 가게이름
 
 			for(int i = 0; i < rowList.size(); i++) {
-//				System.out.println(i + "번째)" + rowList.get(i).text());
 				
 				if (rowList.get(i).text().equals("주소")) {
 					// "도로명주소 [지번] 지번주소"로 되기에 [ 지번 ]으로 split
@@ -57,9 +55,6 @@ public class DetailDAO {
 						addr = adr[0];
 					}
 					det.setAddr(addr);
-					for (String string : adr) {
-						System.out.println(string);
-					}	
 					
 				} else if (rowList.get(i).text().equals("전화번호")) {
 					det.setTel(rowList.get(i + 1).text());
