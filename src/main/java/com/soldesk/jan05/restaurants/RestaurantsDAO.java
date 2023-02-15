@@ -8,10 +8,14 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.soldesk.jan05.detail.DetailDAO;
 import com.soldesk.jan05.member.Member;
 
 @Service
 public class RestaurantsDAO {
+	
+	@Autowired
+	private DetailDAO dDAO;
 	
 	@Autowired
 	private SqlSession ss;
@@ -166,4 +170,5 @@ public class RestaurantsDAO {
 		}
 	}
 
+	
 }

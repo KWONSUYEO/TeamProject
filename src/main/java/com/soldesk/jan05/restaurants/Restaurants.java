@@ -1,6 +1,7 @@
 package com.soldesk.jan05.restaurants;
 
 public class Restaurants {
+	
 	private String r_level;
 	private int r_no;
 	private String r_restName;
@@ -14,16 +15,20 @@ public class Restaurants {
 	private String r_lastOrder;
 	private String r_holiday;
 	private String r_memo;
+	
 	public Restaurants() {
 		// TODO Auto-generated constructor stub
 	}
-	public Restaurants(String r_level, String r_m_id, int r_no, String r_restName, String r_addr, String r_tel, String r_category,
-			String r_priceRange, String r_parking, String r_openHours, String r_lastOrder, String r_holiday, String r_memo) {
+	
+	public Restaurants(String r_level, int r_no, String r_restName, String r_m_id, String r_addr, String r_tel,
+			String r_category, String r_priceRange, String r_parking, String r_openHours, String r_lastOrder,
+			String r_holiday, String r_memo) {
 		super();
+		
 		this.r_level = r_level;
-		this.r_m_id = r_m_id;
 		this.r_no = r_no;
 		this.r_restName = r_restName;
+		this.r_m_id = r_m_id;
 		this.r_addr = r_addr;
 		this.r_tel = r_tel;
 		this.r_category = r_category;
@@ -33,7 +38,9 @@ public class Restaurants {
 		this.r_lastOrder = r_lastOrder;
 		this.r_holiday = r_holiday;
 		this.r_memo = r_memo;
+		
 	}
+
 	public String getR_level() {
 		return r_level;
 	}
@@ -112,4 +119,7 @@ public class Restaurants {
 	public void setR_memo(String r_memo) {
 		this.r_memo = r_memo;
 	}
+
+
+	
 }

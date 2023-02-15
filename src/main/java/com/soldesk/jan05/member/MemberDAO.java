@@ -10,6 +10,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.soldesk.jan05.detail.Detail;
+
 @Service
 public class MemberDAO {
 	
@@ -100,4 +102,8 @@ public class MemberDAO {
 			req.setAttribute("r", "탈퇴 실패");
 		}
 	}
+
+	
+
+	
 }

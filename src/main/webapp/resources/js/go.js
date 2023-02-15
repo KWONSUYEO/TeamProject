@@ -48,3 +48,23 @@ function reviewReplyDelete(no) {
 function restSearch(restName){
 	location.href = "search/" + restName;
 }
+
+$(document).ready(function() {
+	  // "찜하기" 버튼 클릭 시
+	  $('#doDibs').click(function(e) {
+	    e.preventDefault(); // 기본 동작 중단
+	    
+	    // 데이터 전송
+	    $.ajax({
+	      type: 'POST',
+	      url: 'dibsList.jsp',
+	      data: { 유저명 : '상품명' },
+	      success: function() {
+	        alert('찜 목록에 추가되었습니다!');
+	      },
+	      error: function() {
+	        alert('찜하기 실패!');
+	      }
+	    });
+	  });
+	});

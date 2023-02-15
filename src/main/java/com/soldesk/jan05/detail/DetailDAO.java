@@ -1,7 +1,6 @@
 package com.soldesk.jan05.detail;
 
 import java.net.URLEncoder;
-import java.util.Iterator;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,10 +8,16 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.soldesk.jan05.member.MemberDAO;
 
 @Service
 public class DetailDAO {
+	
+	@Autowired
+	private MemberDAO mDAO;
 	
 	// 맛집정보검색
 	public void searchRest(String restName, HttpServletRequest req) {
@@ -97,4 +102,11 @@ public class DetailDAO {
 		
 		
 	}
+
+	
+		
+		
+		
+	
+	
 }
