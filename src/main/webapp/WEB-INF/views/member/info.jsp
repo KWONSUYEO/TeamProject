@@ -42,33 +42,33 @@
 	<table class="loc_cnt">
 	<tr><th align="center"><h1>찜한 정보</h1></th></tr>
 		<tr>
-			<td><a class="loc_a" href="서울특별시">서울특별시(${suCnt })</a></td>
-			<td><a id="loc_a" href="강원도">강원도(${gwCnt })</a></td>
-			<td><a id="loc_a" href="경기도">경기도(${ggCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/서울특별시">서울특별시(${suCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/강원도">강원도(${gwCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/경기도">경기도(${ggCnt })</a></td>
 		</tr>
 		<tr>
-			<td><a id="loc_a" href="경상남도">경상남도(${gsnCnt })</a></td>
-			<td><a id="loc_a" href="경상북도">경상북도(${gsbCnt })</a></td>
-			<td><a id="loc_a" href="광주광역시">광주광역시(${gjCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/경상남도">경상남도(${gsnCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/경상북도">경상북도(${gsbCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/광주광역시">광주광역시(${gjCnt })</a></td>
 		</tr>
 		<tr>
-			<td><a id="loc_a" href="대구광역시">대구광역시(${dgCnt })</a></td>
-			<td><a id="loc_a" href="대전광역시">대전광역시(${djCnt })</a></td>
-			<td><a id="loc_a" href="부산광역시">부산광역시(${bsCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/대구광역시">대구광역시(${dgCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/대전광역시">대전광역시(${djCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/부산광역시">부산광역시(${bsCnt })</a></td>
 		</tr>
 		<tr>
-			<td><a id="loc_a" href="세종특별자치시">세종특별자치시(${sjCnt })</a></td>
-			<td><a id="loc_a" href="울산광역시">울산광역시(${usCnt })</a></td>
-			<td><a id="loc_a" href="인천광역시">인천광역시(${icCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/세종특별자치시">세종특별자치시(${sjCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/울산광역시">울산광역시(${usCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/인천광역시">인천광역시(${icCnt })</a></td>
 		</tr>
 		<tr>
-			<td><a id="loc_a" href="전라남도">전라남도(${jlnCnt })</a></td>
-			<td><a id="loc_a" href="전라북도">전라북도(${jlbCnt })</a></td>
-			<td><a id="loc_a" href="제주특별자치도">제주특별자치도(${jjCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/전라남도">전라남도(${jlnCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/전라북도">전라북도(${jlbCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/제주특별자치도">제주특별자치도(${jjCnt })</a></td>
 		</tr>
 		<tr>
-			<td><a id="loc_a" href="충청남도">충청남도(${ccnCnt })</a></td>
-			<td><a id="loc_a" href="충청북도">충청북도(${ccbCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/충청남도">충청남도(${ccnCnt })</a></td>
+			<td><a id="loc_a" href="/dibs.go/충청북도">충청북도(${ccbCnt })</a></td>
 		</tr>
 	</table>
 </body>

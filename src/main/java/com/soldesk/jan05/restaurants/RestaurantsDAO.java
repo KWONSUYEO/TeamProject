@@ -15,9 +15,6 @@ import com.soldesk.jan05.member.Member;
 public class RestaurantsDAO {
 	
 	@Autowired
-	private DetailDAO dDAO;
-	
-	@Autowired
 	private SqlSession ss;
 	
 	private String[] addrFirst = {"서울특별시", "강원도", "경기도", "경상남도", "경상북도", 
@@ -144,31 +141,5 @@ public class RestaurantsDAO {
 			System.out.println("찜한 맛집 [No." + r.getR_no() + "] 메모등록 실패");
 		}
 	}
-	
-	
-	// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-	// 임시작성
-	
-	// 맛집테이블 전체 조회
-	public void getAllRestaurants(HttpServletRequest req) {
-		try {
-			// [rests]객체에 전체 맛집정보 세팅
-			req.setAttribute("rests", ss.getMapper(RestaurantsMapper.class).getAllRestaurants());
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void getAllVisit(HttpServletRequest req) {
-		try {
-			// [visits]객체에 방문한 맛집정보 세팅
-			req.setAttribute("visits", ss.getMapper(RestaurantsMapper.class).getAllVisit());
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	
 }

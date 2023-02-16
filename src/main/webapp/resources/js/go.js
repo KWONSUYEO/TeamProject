@@ -46,25 +46,63 @@ function reviewReplyDelete(no) {
 }
 
 function restSearch(restName){
-	location.href = "search/" + restName;
+	location.href = "search." + restName;
 }
 
-$(document).ready(function() {
-	  // "찜하기" 버튼 클릭 시
-	  $('#doDibs').click(function(e) {
-	    e.preventDefault(); // 기본 동작 중단
-	    
-	    // 데이터 전송
-	    $.ajax({
-	      type: 'POST',
-	      url: 'dibsList.jsp',
-	      data: { 유저명 : '상품명' },
-	      success: function() {
-	        alert('찜 목록에 추가되었습니다!');
-	      },
-	      error: function() {
-	        alert('찜하기 실패!');
-	      }
-	    });
-	  });
+//function dodibs(detail) {
+//	let f = document.createElement('form');
+//	
+//	let obj;
+//	obj = document.createElement('input');
+//	obj.setAttribute(detail);
+//	
+//	f.appendChild(obj);
+//	f.setAttribute('method', 'post');
+//	f.setAttribute('action', 'do.dibs');
+//	document.body.appendChild(f);
+//	f.submit();
+//}
+function dodibs(detail) {
+
+	$.ajax({
+		type :"post",
+		url :"/do.dibs",
+		data : {
+			level : "1",
+			name : detail.restName,
+			addr : detail.addr,
+			tel : detail.tel,
+			category : detail.category,
+			priceRange : detail.priceRange,
+			parking : detail.parking,
+			openHours : detail.openHours,
+			holiday : detail.holiday
+		},
+		success : function(data) {
+			alert("???");
+		},
+		error : function() {
+			alert("error");
+		}
 	});
+	
+}
+//$(document).ready(function() {
+//	  // "찜하기" 버튼 클릭 시
+//	  $('#doDibs').click(function(e) {
+//	    e.preventDefault(); // 기본 동작 중단
+//	    
+//	    // 데이터 전송
+//	    $.ajax({
+//	      type: 'POST',
+//	      url: 'dibsList.jsp',
+//	      data: { 유저명 : '상품명' },
+//	      success: function() {
+//	        alert('찜 목록에 추가되었습니다!');
+//	      },
+//	      error: function() {
+//	        alert('찜하기 실패!');
+//	      }
+//	    });
+//	  });
+//	});

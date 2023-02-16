@@ -46,6 +46,7 @@
 				<beans:value>classpath:memberMapper.xml</beans:value>
 				<beans:value>classpath:restaurantsMapper.xml</beans:value>
 				<beans:value>classpath:reviewMapper.xml</beans:value>
+				<beans:value>classpath:detailMapper.xml</beans:value>
 			</beans:list>
 		</beans:property>
 	</beans:bean>
