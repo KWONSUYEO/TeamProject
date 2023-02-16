@@ -93,10 +93,15 @@ public class DetailDAO {
 	// 맛집 찜하기
 	public void regiDibs(Restaurants r, HttpServletRequest req) {
 
-		int maxNo = ss.getMapper(DetailMapper.class).getMaxNo(r) + 1;
+		int maxNo = ss.getMapper(DetailMapper.class).getMaxNo(r);
 		Restaurants restTmp = searchTemp(r.getR_restName());
 		
 		r.setR_level("1");
+		if (maxNo == 0) {
+			maxNo = 1;
+		} else {
+			maxNo++;
+		}
 		r.setR_no(maxNo);
 		r.setR_restName(restTmp.getR_restName());
 		r.setR_addr(restTmp.getR_addr());

@@ -3,7 +3,7 @@
 <mapper namespace="com.soldesk.jan05.detail.DetailMapper">
 	
 	<select id="getMaxNo" resultType="int">
-		select MAX(r_no) from restaurants where r_level = '1' and r_m_id = #{r_m_id}
+		select NVL(MAX(r_no), 0) from restaurants where r_level = '1' and r_m_id = #{r_m_id}
 	</select>
 	
 	<select id="getRest" resultType="com.soldesk.jan05.restaurants.Restaurants">

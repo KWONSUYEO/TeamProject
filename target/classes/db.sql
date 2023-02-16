@@ -37,7 +37,7 @@ insert into restaurants values ('1', 'user_1', 2, '테스트맛집_2', 'addr_2',
 
 select * from RESTAURANTS
 
-select MAX(r_no) from RESTAURANTS where r_level = '1' and r_m_id = 'user_1'
+select NVL(MAX(r_no), 0) from RESTAURANTS where r_level = '1' and r_m_id = 'user_1'
 
 drop table restaurants
 
