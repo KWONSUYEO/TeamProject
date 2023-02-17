@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.soldesk.jan05.detail.DetailMapper">
+	
+	<select id="getMaxNo" resultType="int">
+		select NVL(MAX(r_no), 0) from restaurants where r_level = '1' and r_m_id = #{r_m_id}
+	</select>
+	
+	<select id="getRest" resultType="com.soldesk.jan05.restaurants.Restaurants">
+		select * from restaurants where r_level = 1 and r_m_id = #{r_m_id} and r_restName = #{r_restName}
+	</select>
+	
+	<select id="getDibs" resultType="com.soldesk.jan05.restaurants.Restaurants">
+		select * from restaurants where r_level = 1 and r_m_id = #{r_m_id}
+	</select>
+	
+	<insert id="regDibs" parameterType="com.soldesk.jan05.restaurants.Restaurants">
+		insert into restaurants values('1', #{r_m_id}, #{r_no}, #{r_restName}, 
+								  #{r_addr}, #{r_tel}, #{r_category}, #{r_priceRange}, 
+								  #{r_parking, jdbcType=VARCHAR}, #{r_openHours, jdbcType=VARCHAR}, 
+								  #{r_lastOrder, jdbcType=VARCHAR},#{r_holiday, jdbcType=VARCHAR}, 
+								  #{r_memo, jdbcType=VARCHAR})
+	</insert>
+
+</mapper>

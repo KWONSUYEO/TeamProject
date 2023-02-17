@@ -28,8 +28,8 @@
 	<beans:bean id="dataSource"	class="org.apache.commons.dbcp2.BasicDataSource">
 		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<beans:property name="url"
-			value="jdbc:oracle:thin:@192.168.219.106:1521:xe" />
-		<beans:property name="username" value="kwon" />
+			value="jdbc:oracle:thin:@192.168.25.5:1521:xe" />
+		<beans:property name="username" value="lee" />
 		<beans:property name="password" value="1" />
 	</beans:bean>
 
@@ -46,6 +46,7 @@
 				<beans:value>classpath:memberMapper.xml</beans:value>
 				<beans:value>classpath:restaurantsMapper.xml</beans:value>
 				<beans:value>classpath:reviewMapper.xml</beans:value>
+				<beans:value>classpath:detailMapper.xml</beans:value>
 			</beans:list>
 		</beans:property>
 	</beans:bean>

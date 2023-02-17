@@ -7,12 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>index.jsp</title>
-<link rel="stylesheet" href="resources/css/index.css">
-<link rel="stylesheet" href="resources/css/review.css">
-<script type="text/javascript" src="resources/js/jQuery.js"></script>
-<script type="text/javascript" src="resources/js/KwonValidChecker.js"></script>
-<script type="text/javascript" src="resources/js/go.js"></script>
-<script type="text/javascript" src="resources/js/check.js"></script>
+<link rel="stylesheet" href="/jan05/resources/css/index.css">
+<link rel="stylesheet" href="/jan05/resources/css/review.css">
+<script type="text/javascript" src="/jan05/resources/js/jQuery.js"></script>
+<script type="text/javascript" src="/jan05/resources/js/KwonValidChecker.js"></script>
+<script type="text/javascript" src="/jan05/resources/js/go.js"></script>
+<script type="text/javascript" src="/jan05/resources/js/check.js"></script>
 
 </head>
 <body>

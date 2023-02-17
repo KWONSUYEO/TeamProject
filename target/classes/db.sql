@@ -16,12 +16,12 @@ create table restaurants(
 	r_level varchar2(1 char), -- 맛집유형(1:찜 / 2:방문) 
 	r_m_id varchar2(10 char), -- (회원)ID
 	r_no number, -- (각 회원별) 맛집번호
-	r_restName varchar2(50 char), -- 맛집이름
-	r_addr varchar2(100 char), -- 맛집주소
+	r_restName varchar2(100 char), -- 맛집이름
+	r_addr varchar2(250 char), -- 맛집주소
 	r_tel varchar2(20 char), -- 전화번호
-	r_category varchar2(15 char), -- 음식 종류(가게 분류)
-	r_priceRange varchar2(10 char), -- 가격대
-	r_parking varchar2(15 char), -- 주차
+	r_category varchar2(30 char), -- 음식 종류(가게 분류)
+	r_priceRange varchar2(30 char), -- 가격대
+	r_parking varchar2(30 char), -- 주차
 	r_openHours varchar2(20 char), -- 엽엉시간
 	r_lastOrder varchar2(10 char), -- 마지막 주문
 	r_holiday varchar2(5 char), -- 휴일
@@ -36,6 +36,8 @@ insert into restaurants values ('1', 'user_1', 2, '테스트맛집_2', 'addr_2',
 								'한식', '만원 미만', '유료주차 가능', '17:00 - 01:00', null, null, null)
 
 select * from RESTAURANTS
+
+select NVL(MAX(r_no), 0) from RESTAURANTS where r_level = '1' and r_m_id = 'user_1'
 
 drop table restaurants
 

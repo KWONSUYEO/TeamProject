@@ -42,7 +42,7 @@
 	<table class="loc_cnt">
 	<tr><th align="center"><h1>찜한 정보</h1></th></tr>
 		<tr>
-			<td><a class="loc_a" href="서울특별시">서울특별시(${suCnt })</a></td>
+			<td><a id="loc_a" href="서울특별시">서울특별시(${suCnt })</a></td>
 			<td><a id="loc_a" href="강원도">강원도(${gwCnt })</a></td>
 			<td><a id="loc_a" href="경기도">경기도(${ggCnt })</a></td>
 		</tr>

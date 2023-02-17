@@ -8,8 +8,4 @@ public interface RestaurantsMapper {
 	public abstract List<Restaurants> getAllDibs(Member m);
 	public abstract int dibsMemo(Restaurants r);
 	public abstract List<Restaurants> getLocDibs(Restaurants r);
-	
-	// 임시작성
-	public abstract List<Restaurants> getAllRestaurants();
-	public abstract List<Restaurants> getAllVisit();
 }

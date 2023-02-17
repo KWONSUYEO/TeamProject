@@ -43,7 +43,7 @@
 		insert into review values(review_seq.nextval, #{m_id}, #{rr_txt}, sysdate, #{rr_color})
 	</insert>
 	<insert id="writeReply"	parameterType="com.soldesk.jan05.review.ReviewReply">
-		insert into reviews_reply values(review_reply_seq.nextval, #{cr_rr_no}, #{cr_owner}, #{cr_txt}, sysdate)
+		insert into review_reply values(review_reply_seq.nextval, #{cr_rr_no}, #{cr_owner}, #{cr_txt}, sysdate)
 	</insert>
 	<update id="updateMsg"
 		parameterType="com.soldesk.jan05.review.Review">

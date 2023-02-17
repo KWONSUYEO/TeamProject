@@ -1,3 +1,6 @@
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -16,7 +19,7 @@
 	<!-- 도단위 맛집개수 표시 -->
 	<table class="loc_cnt">
 		<tr>
-			<td><a class="loc_a" href="서울특별시">서울특별시(${suCnt })</a></td>
+			<td><a id="loc_a" href="서울특별시">서울특별시(${suCnt })</a></td>
 			<td><a id="loc_a" href="강원도">강원도(${gwCnt })</a></td>
 			<td><a id="loc_a" href="경기도">경기도(${ggCnt })</a></td>
 		</tr>
