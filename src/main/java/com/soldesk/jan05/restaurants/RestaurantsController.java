@@ -33,7 +33,7 @@ public class RestaurantsController {
 	}
 
 	// [찜목록]화면 지역별 맛집정보세팅
-	@RequestMapping(value = "/dibs.go/{addr}", method = RequestMethod.GET)
+	@RequestMapping(value = "{addr}", method = RequestMethod.GET)
 	public String dibsListWithAddr(@PathVariable String addr, HttpServletRequest req) {
 		if (mDAO.loginCheck(req)) {
 			// 지역별 맛집을 검색하기 위한 정보세팅 - r_m_id(회원ID), r_addr({addr} = 도단위 주소)
